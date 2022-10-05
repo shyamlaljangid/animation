@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#face {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: rgb(255, 217, 0);
+    position: relative;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-timing-function: 1;
+
+
+}
+
+#wrapper {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.eyeleft {
+    width: 20px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    left: 50px;
+    top: 40px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.eyeright {
+    width: 20px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 130px;
+    top: 40px;
+    overflow: hidden;
+}
+
+.eyebrowleft {
+    width: 20px;
+    height: 5px;
+    border-top: 2px solid black;
+    position: absolute;
+    border-radius: 50%;
+    left:50px;
+    top: 30px;
+
+}
+
+.eyebrowright {
+    width: 20px;
+    height: 5px;
+    border-top: 2px solid black;
+    position: absolute;
+    border-radius: 50%;
+    left: 130px;
+    top: 30px;
+}
+
+.lens {
+    width: 15px;
+    height: 18px;
+    border: 1px solid black;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+
+    top: 33px;
+}
+
+.nouse {
+    width: 10px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: burlywood;
+    left: 100px;
+    top: 95px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.mouth {
+    width: 80px;
+    height: 35px;
+    border-bottom: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 65px;
+    top: 130px;
+}
+
+#face {
+    animation: rotate 6s 1s;
+}
+
+.eyeleft {
+    animation: wink 0.5s 6.5s;
+}
+
+@keyframes rotate {
+    0% {
+        left: 0;
+        transform: rotate(0);
+    }
+
+    50% {
+        left: calc(100% - 200px);
+        transform: rotate(360deg);
+    }
+
+    100% {
+        left: 0;
+        transform: rotate(0);
+    }
+}
+
+@keyframes wink {
+    0% {
+        height: 50px;
+        top: 40px;
+    }
+
+    50% {
+        height: 0px;
+        top: 60px;
+    }
+
+    100% {
+        height:50px;
+        top: 40px;
+    }
+}
+
+ .eyebrowleft{
+    animation: winkeyebrow 0.5s 6.5s;
+}
+@keyframes winkeyebrow{
+    0%{  top: 30px; height:5px ;}
+    50%{top: 45px; height: 0;}
+    100%{ top: 30px; height: 5px;}
+}
+.mouth{
+    animation: mouth  0.5s 7s;
+}
+/* @keyframes mouth{
+    0%{width:80px ;  left: 60px;}
+    50%{width:0px ;  left: 100px;}
+    100%{width:80px ;  left: 60px;}
+} */
+@keyframes mouth{
+
+    0%{ height: 25px; top: 140px;}
+    50%{  height:0px; top: 170px;}
+    100%{ height: 25px; top: 140px;}
+}
